@@ -17,6 +17,7 @@
 - [Useful Links](#useful-links)
 
 ## My Collaborators Image
+![Collaborators Screenshot](collaborator.png)
 
 ## Sample Single Line Code Embedding
 
