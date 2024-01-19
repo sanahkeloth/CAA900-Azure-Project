@@ -20,8 +20,18 @@
 ![Collaborators Screenshot](collaborator.png)
 
 ## Sample Single Line Code Embedding
+To retrieve the username email of the Azure account, you can use the following Azure CLI command:
+`az account show --query user.name -o tsv`
 
 ## Sample Multi-Line Code Snippet
+```bash
+# Azure CLI Script to Check and Create a Resource Group if it Doesn't Exist
+if [ $(az group exists --name myResourceGroup) = false ]; then 
+   az group create --name myResourceGroup --location eastus
+else
+   echo "myResourceGroup already exists"
+fi
+```
 
 ## Sample JSON Object
 
