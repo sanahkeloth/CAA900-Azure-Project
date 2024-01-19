@@ -60,6 +60,18 @@ fi
 
 ## Collaboration in GitHub - Suggestions
 
+These are my suggestions:
+
+1. **Suggestion 1:** Implement collapsible sections for lengthy content and include "Back to Top" links to facilitate easier document navigation.
+
+2. **Suggestion 2:** Add a version and "last updated" date to the document to inform the readers about the latest updates and maintenance status.
+
+3. **Suggestion 3:** Include emojis, icons, and badges to enhance visual appeal and to add information cues.
+
+![Suggestions in Discussion Panel Screenshot](suggestions.png)
+[Discussion Panel Link](https://github.com/orgs/Azure-Project-Winter2024/discussions/19#discussioncomment-8176881): How do you think Checkpoint1 instructions can be improved? 
+
 ## Useful Links
 - [Azure CLI with Bash Documentation](https://learn.microsoft.com/en-us/cli/azure/azure-cli-learn-bash#starting-bash): Microsoft Azure CLI documentation for using Azure CLI with Bash, making it easy to manage Azure services from the command line.
+- [Markdown Guide](https://www.markdownguide.org/): Comprehensive guide to Markdown, the lightweight markup language for text formatting.
 
