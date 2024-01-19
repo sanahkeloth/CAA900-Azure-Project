@@ -20,7 +20,7 @@
 ![Collaborators Screenshot](collaborator.png)
 
 ## Sample Single Line Code Embedding
-To retrieve the username email of the Azure account, you can use the following Azure CLI command:
+To retrieve the email address of the Azure account, you can use the following Azure CLI command:
 `az account show --query user.name -o tsv`
 
 ## Sample Multi-Line Code Snippet
@@ -35,8 +35,31 @@ fi
 
 ## Sample JSON Object
 
+```JSON
+{
+  "environmentName": "AzureCloud",
+  "homeTenantId": "2c8d1a65-7f21-4b6d-98e6-9b0fba50a8e7",
+  "id": "6f8b3e92-41c7-4eaa-9a6d-8c4a12f36d57",
+  "isDefault": true,
+  "managedByTenants": [],
+  "name": "Azure for Students",
+  "state": "Enabled",
+  "tenantId": "2c8d1a65-7f21-4b6d-98e6-9b0fba50a8e7",
+  "user": {
+    "name": "shedavalath-vayalil@myseneca.ca",
+    "type": "user"
+  }
+}
+```
+
 ## Sample Table
+
+| EnvironmentName | HomeTenantId                          | IsDefault | Name                | State   | TenantId                            |
+| --------------- | ------------------------------------ | --------- | ------------------- | ------- | ----------------------------------- |
+| AzureCloud      | 6f8b3e92-41c7-4eaa-9a6d-8c4a12f36d57 | True      | Azure for Students  | Enabled | 6f8b3e92-41c7-4eaa-9a6d-8c4a12f36d57 |
 
 ## Collaboration in GitHub - Suggestions
 
 ## Useful Links
+- [Azure CLI with Bash Documentation](https://learn.microsoft.com/en-us/cli/azure/azure-cli-learn-bash#starting-bash): Microsoft Azure CLI documentation for using Azure CLI with Bash, making it easy to manage Azure services from the command line.
+
