@@ -23,7 +23,35 @@
 
 **Q) How do these two commands differ - `git status` vs `git log`? Elaborate with an example.**
 
-`git status` shows the status of your local working directory since the last commit, covering untracked, uncommitted, and committed changes. It also provides details about the current local branch in relation to the remote repository. On the other hand, `git log` is used to examine the commit history details. In short, `git status` deals with the current state of your working directory and `git log` focuses on the historical record of commits in the repository.
+`git status` shows the status of your local working directory since the last commit, covering untracked, uncommitted, and committed changes. It also provides details about the current local branch in relation to the remote repository. On the other hand, `git log` is used to examine the commit history details. 
+
+```bash
+# git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   Checkpoint2/README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+```bash
+# git log -n 2 
+commit 4fa44b8d45a36520d49018611dab48222afcc079
+Author: Sanah <shedavalath-vayalil@myseneca.ca>
+Date:   Thu Jan 25 23:34:55 2024 -0500
+
+    add finishing touches to README.md
+
+commit 58642e615d84692614f2fe823cd1992376c6c6bc
+Author: Sanah <shedavalath-vayalil@myseneca.ca>
+Date:   Thu Jan 25 23:33:40 2024 -0500
+
+    added Part D - README.md
+```
+In short, `git status` deals with the current state of your working directory (in the above case, the untracked files) and `git log` focuses on the historical record of commits in the repository (in the above case, the latest 2 commits).
 
 ## Part C: Creating & Merging Branches
 
