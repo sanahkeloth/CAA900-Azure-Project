@@ -15,9 +15,9 @@
 
 ## Part A: Adding Files - Local Repo Workflow
 
-a. [Git Status Untracked](git_status_untracked.txt)
-b. [Git Status Uncommitted](git_status_uncommitted.txt)
-c. [Git Status Committed](git_status_committed.txt)
+- [Git Status Untracked](git_status_untracked.txt)
+- [Git Status Uncommitted](git_status_uncommitted.txt)
+- [Git Status Committed](git_status_committed.txt)
 
 ## Part B: Inspecting Local Repo with `git status` and `git log`
 
