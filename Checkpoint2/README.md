@@ -59,3 +59,23 @@ Date:   Thu Jan 25 19:28:17 2024 -0500
 
     Created a new folder Checkpoint1 in the root dir and copied files to it
 ```
+## Part D: Git Branching Strategy Review Question
+
+**Q1) What are the differences between `develop` branch and `main` branch?**
+
+The `main` branch houses our production-ready code, clearly marked with version number tags, and only hotfix branches stem from it for critical updates. In contrast, the `develop` branch contains the code that are in active development. Its code is in-progress and moves to the main branch through a release process after thorough testing. Branches for new features and bugfixes are created from it.
+
+**Q2) What are the three supporting branches? Briefly describe the function of each of these supporting branches.**
+
+- **Feature/Bugfix Branches** : 
+Feature and bugfix branches, with naming convention `feat-issue-<id>` and `bug-issue-<id>`, respectively, are employed for adding new features or fixing bugs. These branches consistently branch off from and merge back into the `develop` branch after resolving any conflicts with its HEAD. Importantly, feature branches can be merged back into the `develop` branch at any stage of the deployment cycle, depending on the time it takes to complete the feature. On the other hand, bugfix branches typically have a short-lived existence, not lasting longer than one deployment cycle.
+
+- **Hotfix Branches** : 
+Hotfix branches, with naming convention `hotfix-issue-<id>`, are designed for immediate fixes to our live production code. They branch directly from `main` to swiftly address urgent issues without waiting for scheduled deployments. After resolving the problems, they merge back into both `main` and `develop` to ensure consistency.
+
+- **Release Branches** : 
+Release branches, with naming convention `release-<semver>`, are short-lived branches used to finalize preparations for a new release. After incorporating all scheduled features and bug fixes into the `develop` branch, a release branch is created. It handles final touches like versioning and last-minute fixes. When ready, it merges into `main` for the release and back into `develop` to maintain synchronization.
+
+**Q3) What are the best practices in working with release branches?**
+
+In adhering to best practices with `release` branches, it is essential to follow a naming convention such as `release-<semver>`. These branches should originate from the `develop` branch but merge both into `main` for the actual release and back into `develop` to maintain synchronization for future development. `release` branches should only be created when all planned features and bug fixes for a scheduled release are fully integrated and tested in the `develop` branch. These branches are primarily reserved for last-minute minor adjustments and should be tagged with an updated version number. When merging, using the `--no-ff` flag is recommended to create a merge commit that preserves historical information. Effective communication and team lead approvals at each stage are crucial for a smooth release.
