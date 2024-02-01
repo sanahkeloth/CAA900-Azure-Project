@@ -1,0 +1,6 @@
+From github.com:160683231-myseneca/CAA900-Azure-Project
+ * branch            feat-body-text -> FETCH_HEAD
+ * [new branch]      feat-body-text -> origin/feat-body-text
+Auto-merging Checkpoint3/conflict-resolution/index.html
+CONFLICT (content): Merge conflict in Checkpoint3/conflict-resolution/index.html
+Automatic merge failed; fix conflicts and then commit the result.
