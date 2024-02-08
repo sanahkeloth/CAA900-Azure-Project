@@ -1,0 +1,7 @@
+Name                  ResourceGroup       Location    Type                               Status
+--------------------  ------------------  ----------  ---------------------------------  --------
+RT-45                 Student-RG-1202091  canadaeast  Microsoft.Network/routeTables
+Router-45             Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+Server-45             Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+Student-1202091-vnet  Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+odluser1202091        Student-RG-1202091  canadaeast  Microsoft.Storage/storageAccounts
