@@ -6,8 +6,8 @@ source ./network_config.sh
 # /////////////////////////////////////////////////////////////
 # ---------------------------------------------------
 # Windows VM Credentials
-USER_NAME=""
-ADMIN_PW=""
+USER_NAME="student"
+ADMIN_PW="adminPW12345"
 
 # ---------------------------------------------------
 # sshkey pair names
