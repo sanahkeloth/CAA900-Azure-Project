@@ -20,9 +20,9 @@
 **Resource list :**
 
 ```
-az resource list --resource-group Student-RG-1202091 --output table
+az resource list --resource-group Student-RG-1202091 --output table > partA_resource_list.tbl
 ```
-[Link to peering.tbl](./bash-scripts/peerings.tbl)
+[Link to partA_resource_list.tbl](./bash-scripts/partA_resource_list.tbl)
 
 ```
 Name                  ResourceGroup       Location    Type                               Status
@@ -40,6 +40,23 @@ odluser1202091        Student-RG-1202091  canadaeast  Microsoft.Storage/storageA
 4. What is the Azure CLI command to create `subnet`? Give the specific command as per your environment and unique ID configuration. What are the required and what are the optional parameters that you need to pass to it?
 
 ## Part B - Working with Azure CLI Bash
+
+**Resource list :**
+
+```
+az resource list --resource-group Student-RG-1202091 --output table > partB_resource_list.tbl
+```
+[Link to partB_resource_list.tbl](./bash-scripts/partB_resource_list.tbl)
+
+```
+Name                  ResourceGroup       Location    Type                               Status
+--------------------  ------------------  ----------  ---------------------------------  --------
+RT-45                 Student-RG-1202091  canadaeast  Microsoft.Network/routeTables
+Router-45             Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+Server-45             Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+Student-1202091-vnet  Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+odluser1202091        Student-RG-1202091  canadaeast  Microsoft.Storage/storageAccounts
+```
 
 1. List all VNETs using `az network vnet list` command and send the output in `json` format to `vnet_list.json`file
 
@@ -140,6 +157,43 @@ Windows VM Credentials in [backend_config.sh](./bash-scripts/backend_config.sh)
 USER_NAME="student"
 ADMIN_PW="adminPW12345"
 ```
+**Resource list :**
+
+```
+az resource list --resource-group Student-RG-1202091 --output table > partD_resource_list.tbl
+```
+[Link to partD_resource_list.tbl](./bash-scripts/partD_resource_list.tbl)
+
+```
+Name                                             ResourceGroup       Location    Type                                     Status
+-----------------------------------------------  ------------------  ----------  ---------------------------------------  --------
+LR-45_OsDisk_1_beab9782b3e848a2b5354458152d923a  STUDENT-RG-1202091  canadaeast  Microsoft.Compute/disks
+LS-45_OsDisk_1_921976e4293c43f7b6d189b4ac31a60c  STUDENT-RG-1202091  canadaeast  Microsoft.Compute/disks
+WC-45_OsDisk_1_a95404e9363f4f1da0440d36227e4f75  STUDENT-RG-1202091  canadaeast  Microsoft.Compute/disks
+WS-45_OsDisk_1_be49ad379baf41efacb0e9abdd937860  STUDENT-RG-1202091  canadaeast  Microsoft.Compute/disks
+sshkey                                           Student-RG-1202091  canadaeast  Microsoft.Compute/sshPublicKeys
+LR-45                                            Student-RG-1202091  canadaeast  Microsoft.Compute/virtualMachines
+LS-45                                            Student-RG-1202091  canadaeast  Microsoft.Compute/virtualMachines
+WC-45                                            Student-RG-1202091  canadaeast  Microsoft.Compute/virtualMachines
+WS-45                                            Student-RG-1202091  canadaeast  Microsoft.Compute/virtualMachines
+shutdown-computevm-LR-45                         Student-RG-1202091  canadaeast  Microsoft.DevTestLab/schedules
+shutdown-computevm-LS-45                         Student-RG-1202091  canadaeast  Microsoft.DevTestLab/schedules
+shutdown-computevm-WC-45                         Student-RG-1202091  canadaeast  Microsoft.DevTestLab/schedules
+shutdown-computevm-WS-45                         Student-RG-1202091  canadaeast  Microsoft.DevTestLab/schedules
+lr-45                                            Student-RG-1202091  canadaeast  Microsoft.Network/networkInterfaces
+ls-45                                            Student-RG-1202091  canadaeast  Microsoft.Network/networkInterfaces
+wc-45                                            Student-RG-1202091  canadaeast  Microsoft.Network/networkInterfaces
+ws-45                                            Student-RG-1202091  canadaeast  Microsoft.Network/networkInterfaces
+LR-NSG-45                                        Student-RG-1202091  canadaeast  Microsoft.Network/networkSecurityGroups
+LS-NSG-45                                        Student-RG-1202091  canadaeast  Microsoft.Network/networkSecurityGroups
+WC-NSG-45                                        Student-RG-1202091  canadaeast  Microsoft.Network/networkSecurityGroups
+WS-NSG-45                                        Student-RG-1202091  canadaeast  Microsoft.Network/networkSecurityGroups
+RT-45                                            Student-RG-1202091  canadaeast  Microsoft.Network/routeTables
+Router-45                                        Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+Server-45                                        Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+Student-1202091-vnet                             Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+odluser1202091                                   Student-RG-1202091  canadaeast  Microsoft.Storage/storageAccounts
+```
 
 1. List all VMs and send the output in `table` format to `vm_list.tbl` file. What command did you use?
 
@@ -185,14 +239,27 @@ ADMIN_PW="adminPW12345"
 
 4. Provide screenshot of _auto shutdown configuration_ for `LS_XX`. Is there any command to show this? What is the time-zone? What should be the correct time settings considering the time zone differences?
 
+![alt text](./LS-45_Auto_Shutdown.png) "LS-45 Auto Shutdown screenshot"
+
 5. Why `auto shutdown configuration` is not done in [vm_create](https://github.com/Azure-Project-Winter2024/Azure-Project-Scripts/blob/94d21ad5454163ae8e2ee331f8a41291fca6e155/CP4-Scripts/bash-scripts/vm_create.sh#L128) code? Why is it a separate scripts? Is it possible to configure auto shutdown at the same time you are creating the VM?
 
 ## Part E - Creating Custom Images from VMs using Azure CLI
 
 1. What are the difference between the script that creates VM from Azure Generic Image vs Custom Image? A good place to start is to compare the two scripts `vm_create.sh` and `custom_vm_create.sh` and check the parameters passed to `az vm create` command. Elaborate the differences you observe.
+
+In `custom_vm_create.sh` we have to pass the variable to set `target-version`, which is in turn used to create custom images with custome `image_name`. However, `vm_create.sh` does uses stock images instead. Moreover, the `vm_create.sh` uses ` --ssh-key-values $public_sshkey_file ` to set ssh keys for the vms created, but `custom_vm_create.sh` does not. 
+
 2. If you run `custom_vm_create.sh` without custom image `version` number, the script will throw an error and show you the usage suggestion. What is the usage suggestion?
+
+![alt text](./custom_vm_create_image_version_error.png) "Error message while creating vm using custom_vm_create.sh without image version"
+
 3. The script is purposefully written such that it waits on each custom image creation to be completed before proceeding to next image. Can you update the script such that custom images creation runs in background, i.e. how can you parallelize the process?_Hint: only provide the single line command that you need to update_
+
+
+
 4. Once all custom images are successfully created, run a command in CLI that lists all your Custom Images. Change the output format to table format and embed the answer in your submission.
+
+
 5. Delete your VMs using the proper script after above step is completed. Then re-create VMs using your custom images. Check is all VMs are accessible, i.e. Client VM can be reached via Bastion and Linux VMs can be accessed with ssh.
 6. Get a list of your VM, NSG, NIC, Disks, and Custom Iamges using Azure CLI in table format. Which ones are empty? 
 

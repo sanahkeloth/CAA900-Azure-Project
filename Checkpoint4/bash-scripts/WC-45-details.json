@@ -99,12 +99,12 @@
       "image": null,
       "managedDisk": {
         "diskEncryptionSet": null,
-        "id": "/subscriptions/bd627181-5ddb-4bb6-b03f-5297c3be4e1e/resourceGroups/Student-RG-1202091/providers/Microsoft.Compute/disks/WC-45_disk1_7622facc45f04901b4aea64b10dc0ff9",
+        "id": "/subscriptions/bd627181-5ddb-4bb6-b03f-5297c3be4e1e/resourceGroups/Student-RG-1202091/providers/Microsoft.Compute/disks/WC-45_OsDisk_1_2e8a5ee353f64315bf48cd01d83087d6",
         "resourceGroup": "Student-RG-1202091",
         "securityProfile": null,
         "storageAccountType": "StandardSSD_LRS"
       },
-      "name": "WC-45_disk1_7622facc45f04901b4aea64b10dc0ff9",
+      "name": "WC-45_OsDisk_1_2e8a5ee353f64315bf48cd01d83087d6",
       "osType": "Windows",
       "vhd": null,
       "writeAcceleratorEnabled": null
@@ -117,10 +117,10 @@
     "TemplateId": "7633",
     "TenantId": "353"
   },
-  "timeCreated": "2024-02-08T21:21:28.227075+00:00",
+  "timeCreated": "2024-02-08T23:54:28.554850+00:00",
   "type": "Microsoft.Compute/virtualMachines",
   "userData": null,
   "virtualMachineScaleSet": null,
-  "vmId": "7811e7c4-c871-4a87-8c49-95dce2bfa354",
+  "vmId": "d7125e3b-9964-4879-b464-2a60d907863a",
   "zones": null
 }
