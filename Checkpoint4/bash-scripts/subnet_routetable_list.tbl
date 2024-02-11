@@ -1,0 +1,5 @@
+SubnetName    VNetName    RouteTableId
+------------  ----------  -----------------------------------------------------------------------------------------------------------------------------------
+SN1           Server-45   /subscriptions/bd627181-5ddb-4bb6-b03f-5297c3be4e1e/resourceGroups/Student-RG-1202091/providers/Microsoft.Network/routeTables/RT-45 SubnetName              VNetName              RouteTableId
+----------------------  --------------------  -----------------------------------------------------------------------------------------------------------------------------------
+Virtual-Desktop-Client  Student-1202091-vnet  /subscriptions/bd627181-5ddb-4bb6-b03f-5297c3be4e1e/resourceGroups/Student-RG-1202091/providers/Microsoft.Network/routeTables/RT-45

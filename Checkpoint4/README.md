@@ -148,6 +148,30 @@ odluser1202091        Student-RG-1202091  canadaeast  Microsoft.Storage/storageA
 
 7. (Optional) What CLI command will show you which subnet is associated to which route in route table? _(Hint: maybe start with 'az network vnet subnet show`)_
 
+    ```
+    RT_ID=$(az network route-table show --name RT-45 --resource-group Student-RG-1202091 --query "id" -o tsv)
+    VNETS=($(az network vnet list --resource-group Student-RG-1202091 --query "[].name" -o tsv))
+    for VNET in "${VNETS[@]}"; do
+        subnet=$(az network vnet subnet list --resource-group Student-RG-1202091 \
+                                         --vnet-name "$VNET" \
+                                         --query "[?routeTable.id=='$RT_ID'].{SubnetName:name, VNetName:'$VNET', RouteTableId:routeTable.id}" \
+                                         -o table)
+        results+=("$subnet")
+    done
+    echo $results
+    ```
+
+    [Link to subnet_routetable_list.tbl](./bash-scripts/subnet_routetable_list.tbl)
+
+    
+    ```
+    SubnetName    VNetName    RouteTableId
+    ------------  ----------  -----------------------------------------------------------------------------------------------------------------------------------
+    SN1           Server-45   /subscriptions/bd627181-5ddb-4bb6-b03f-5297c3be4e1e/resourceGroups/Student-RG-1202091/providers/Microsoft.Network/routeTables/RT-45 SubnetName              VNetName              RouteTableId
+    ----------------------  --------------------  -----------------------------------------------------------------------------------------------------------------------------------
+    Virtual-Desktop-Client  Student-1202091-vnet  /subscriptions/bd627181-5ddb-4bb6-b03f-5297c3be4e1e/resourceGroups/Student-RG-1202091/providers/Microsoft.Network/routeTables/RT-45
+    ```
+
 ## Part C - Network Review Questions
 
 1. What is Azure Virtual Network (VNET)? Elaborate in your own words, you may use diagrams if drawn by yourself.
