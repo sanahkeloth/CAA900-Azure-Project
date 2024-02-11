@@ -1,0 +1,6 @@
+Name    ResourceGroup       Location    Zones
+------  ------------------  ----------  -------
+LR-45   Student-RG-1202091  canadaeast
+LS-45   Student-RG-1202091  canadaeast
+WC-45   Student-RG-1202091  canadaeast
+WS-45   Student-RG-1202091  canadaeast

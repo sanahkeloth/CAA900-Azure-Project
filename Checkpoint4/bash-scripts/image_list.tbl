@@ -1,0 +1,6 @@
+HyperVGeneration    Location    Name           ProvisioningState    ResourceGroup
+------------------  ----------  -------------  -------------------  ------------------
+V2                  canadaeast  lr-45-ver-1.0  Succeeded            Student-RG-1202091
+V2                  canadaeast  ls-45-ver-1.0  Succeeded            Student-RG-1202091
+V2                  canadaeast  wc-45-ver-1.0  Succeeded            Student-RG-1202091
+V1                  canadaeast  ws-45-ver-1.0  Succeeded            Student-RG-1202091

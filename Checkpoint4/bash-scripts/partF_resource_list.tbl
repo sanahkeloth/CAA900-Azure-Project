@@ -1,0 +1,20 @@
+Name                  ResourceGroup       Location    Type                                     Status
+--------------------  ------------------  ----------  ---------------------------------------  --------
+lr-45-ver-1.0         Student-RG-1202091  canadaeast  Microsoft.Compute/images
+ls-45-ver-1.0         Student-RG-1202091  canadaeast  Microsoft.Compute/images
+wc-45-ver-1.0         Student-RG-1202091  canadaeast  Microsoft.Compute/images
+ws-45-ver-1.0         Student-RG-1202091  canadaeast  Microsoft.Compute/images
+sshkey                Student-RG-1202091  canadaeast  Microsoft.Compute/sshPublicKeys
+lr-45                 Student-RG-1202091  canadaeast  Microsoft.Network/networkInterfaces
+ls-45                 Student-RG-1202091  canadaeast  Microsoft.Network/networkInterfaces
+wc-45                 Student-RG-1202091  canadaeast  Microsoft.Network/networkInterfaces
+ws-45                 Student-RG-1202091  canadaeast  Microsoft.Network/networkInterfaces
+LR-NSG-45             Student-RG-1202091  canadaeast  Microsoft.Network/networkSecurityGroups
+LS-NSG-45             Student-RG-1202091  canadaeast  Microsoft.Network/networkSecurityGroups
+WC-NSG-45             Student-RG-1202091  canadaeast  Microsoft.Network/networkSecurityGroups
+WS-NSG-45             Student-RG-1202091  canadaeast  Microsoft.Network/networkSecurityGroups
+RT-45                 Student-RG-1202091  canadaeast  Microsoft.Network/routeTables
+Router-45             Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+Server-45             Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+Student-1202091-vnet  Student-RG-1202091  canadaeast  Microsoft.Network/virtualNetworks
+odluser1202091        Student-RG-1202091  canadaeast  Microsoft.Storage/storageAccounts

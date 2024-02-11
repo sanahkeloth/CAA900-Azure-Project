@@ -1,0 +1,6 @@
+Location    Name       ProvisioningState    ResourceGroup       ResourceGuid
+----------  ---------  -------------------  ------------------  ------------------------------------
+canadaeast  LR-NSG-45  Succeeded            Student-RG-1202091  71378a96-5935-4385-a1aa-9f9a408b223c
+canadaeast  LS-NSG-45  Succeeded            Student-RG-1202091  f1ae0a96-625a-46cd-b995-4bf88dd0f5bc
+canadaeast  WC-NSG-45  Succeeded            Student-RG-1202091  780bb7eb-0433-4d98-99d9-935000c95b9c
+canadaeast  WS-NSG-45  Succeeded            Student-RG-1202091  f5535853-4c43-44ef-8b2c-0ab9696983bd

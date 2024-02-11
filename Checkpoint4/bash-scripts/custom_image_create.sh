@@ -53,7 +53,7 @@ else
                         --location $LOCATION  \
                         --os-disk-caching None \
                         --os-type $os_type \
-                        --storage-sku $OS_DISK_SKU
+                        --storage-sku $OS_DISK_SKU \
 
         echo "Iamge Created!"
     fi

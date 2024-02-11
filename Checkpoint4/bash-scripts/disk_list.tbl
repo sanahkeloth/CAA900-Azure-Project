@@ -1,0 +1,6 @@
+Name                                          ResourceGroup       Location    Zones    Sku              OsType    SizeGb    ProvisioningState
+--------------------------------------------  ------------------  ----------  -------  ---------------  --------  --------  -------------------
+LR-45_disk1_89ed54e56dd747c4ae727477d53e7967  Student-RG-1202091  canadaeast           StandardSSD_LRS  Linux     64        Succeeded
+LS-45_disk1_318df4e16e9645cfb1707acf7963fbaf  Student-RG-1202091  canadaeast           StandardSSD_LRS  Linux     64        Succeeded
+WC-45_disk1_1a6196c406564b5ebdb33996e6fd37a1  Student-RG-1202091  canadaeast           StandardSSD_LRS  Windows   127       Succeeded
+WS-45_disk1_b967f9ef1f74430192c7ac74e740f18c  Student-RG-1202091  canadaeast           StandardSSD_LRS  Windows   127       Succeeded
