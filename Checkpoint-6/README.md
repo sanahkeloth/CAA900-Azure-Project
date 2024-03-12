@@ -21,7 +21,6 @@ Default setting usually includes a default policy of:
 - `ACCEPT` all `icmp`
 - `ACCEPT` all `ssh`
 <br/>
-
 To improve the settings from vulnerabilities, we should allow `ssh` only from known CIDR ranges and reject `icmp`. <br/><br/>
 
 2. Run a command that shows the hostname in `LR-XX` and `LS-XX` and embed the output in your submission.
@@ -30,5 +29,10 @@ To improve the settings from vulnerabilities, we should allow `ssh` only from kn
 - LS-45 hostname: `LS-45.CAA9002241.com`
 <br/><br/>
 
+3. Submit your `lr_iptables.txt` and `ls_iptables.txt` files.
+
+LR iptables: [lr_iptables](./iptables/lr_iptables.txt)<br/>
+LS iptables: [ls_iptables](./iptables/ls_iptables.txt)
+<br/><br/>
 
 ## Part B - Azure Cost Analysis Charts
