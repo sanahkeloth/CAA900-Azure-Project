@@ -51,3 +51,7 @@ LS iptables: [ls_iptables](./iptables/ls_iptables.txt)
 |6|STUDENT-RG-1202091| Pie Chart | NA | Last Month | Product | NA | <img src="./images/product-piechart.png" alt="Product Piechart" style="float: left; margin-right: 10px;" /> |
 
 <br/><br/>
+
+2. Customized Dashboard
+
+![Cost Analysis Dashboard](./images/cost-analysis-dashboard.png)
